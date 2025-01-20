@@ -1,10 +1,17 @@
 import './globals.css';
+import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/sonner';
 import { CookieConsent } from '@/components/cookie-consent';
+
+const inter = Inter({
+  subsets: ['latin'], // Choose the subsets you need
+  variable: '--font-inter', // Define a CSS variable for the font
+  display: 'swap', // Optional: Improves loading experience
+});
 
 export const metadata: Metadata = {
   title: 'Next-Gen Data Lead | Modern Data Solutions',
@@ -36,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
