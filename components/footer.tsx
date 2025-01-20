@@ -16,11 +16,11 @@ export function Footer() {
               About
             </Link>
           </div>
-          <div className="pb-6">
+          {/* <div className="pb-6">
             <Link href="/blog" className="text-sm leading-6 text-muted-foreground hover:text-primary">
               Blog
             </Link>
-          </div>
+          </div> */}
           <div className="pb-6">
             <Link href="/contact" className="text-sm leading-6 text-muted-foreground hover:text-primary">
               Contact
