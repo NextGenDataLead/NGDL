@@ -8,12 +8,12 @@ import { CookieConsent } from '@/components/cookie-consent';
 
 export const metadata: Metadata = {
   title: 'Next-Gen Data Lead | Modern Data Solutions',
-  description: 'Transform your business with cutting-edge data management, analytics, and blockchain solutions.',
+  description: 'Transform your business with cutting-edge data management, analytics, AI, and blockchain solutions.',
   keywords: 'data services, analytics, blockchain, data management, business intelligence',
   metadataBase: new URL('https://nextgendatalead.com'),
   openGraph: {
     title: 'Next-Gen Data Lead | Modern Data Solutions',
-    description: 'Transform your business with cutting-edge data management, analytics, and blockchain solutions.',
+    description: 'Transform your business with cutting-edge data management, analytics, AI, and blockchain solutions.',
     url: 'https://nextgendatalead.com',
     siteName: 'Next-Gen Data Lead',
     images: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Next-Gen Data Lead | Modern Data Solutions',
-    description: 'Transform your business with cutting-edge data management, analytics, and blockchain solutions.',
+    description: 'Transform your business with cutting-edge data management, analytics, AI, and blockchain solutions.',
     images: ['/images/logo_text.png'],
     creator: '@NextGenDataLead',
   },
