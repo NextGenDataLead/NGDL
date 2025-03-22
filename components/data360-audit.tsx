@@ -59,7 +59,7 @@ export function Data360Audit() {
           <div className="mt-6 flex flex-col items-center gap-2">
             <div className="text-2xl font-bold flex items-center gap-3">
               <span className="text-muted-foreground line-through">€9,350</span>
-              <span className="text-primary">€7,450</span>
+              <span className="text-primary">€6,950</span>
               <Badge variant="secondary" className="text-sm">20% OFF</Badge>
             </div>
             <div className="flex items-center gap-2 text-sm">
