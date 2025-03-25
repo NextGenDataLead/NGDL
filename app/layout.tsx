@@ -17,11 +17,11 @@ export const metadata: Metadata = {
   title: 'Next-Gen Data Lead | Modern Data Solutions',
   description: 'Transform your business with cutting-edge data management, analytics, AI, and blockchain solutions.',
   keywords: 'data services, analytics, blockchain, data management, business intelligence',
-  metadataBase: new URL('https://nextgendatalead.com'),
+  metadataBase: new URL('https://iddatasolutions.nl'),
   openGraph: {
     title: 'Next-Gen Data Lead | Modern Data Solutions',
     description: 'Transform your business with cutting-edge data management, analytics, AI, and blockchain solutions.',
-    url: 'https://nextgendatalead.com',
+    url: 'https://iddatasolutions.nl',
     siteName: 'Next-Gen Data Lead',
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     'whatsapp:image': '/images/logo_text.png',
     'og:image:width': '1200',
     'og:image:height': '630',
-    'og:image:type': 'image/png',
+    'og:image:type': '/images/logo_text.png',
   },
   icons: {
     icon: [
