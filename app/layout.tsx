@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: 'Next-Gen Data Lead',
     images: [
       {
-        url: '/images/logo_text.png',
+        url: '/images/OpenGraph.jpg',
         width: 1200,
         height: 630,
         alt: 'Next-Gen Data Lead - Modern Data Solutions',
@@ -38,15 +38,15 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Next-Gen Data Lead | Modern Data Solutions',
     description: 'Transform your business with cutting-edge data management, analytics, AI, and blockchain solutions.',
-    images: ['/images/logo_text.png'],
+    images: ['/images/OpenGraph.jpg'],
     creator: '@NextGenDataLead',
   },
   other: {
-    'linkedin:image': '/images/logo_text.png',
-    'whatsapp:image': '/images/logo_text.png',
+    'linkedin:image': '/images/OpenGraph.jpg',
+    'whatsapp:image': '/images/OpenGraph.jpg',
     'og:image:width': '1200',
     'og:image:height': '630',
-    'og:image:type': '/images/logo_text.png',
+    'og:image:type': '/images/OpenGraph.jpg',
   },
   icons: {
     icon: [
