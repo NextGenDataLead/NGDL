@@ -133,7 +133,7 @@ export function Data360Audit() {
                   <ArrowDownToLine className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <p className="font-medium">Action Plan</p>
-                    <p className="text-sm text-muted-foreground">Detailed roadmap for implementation</p>
+                    <p className="text-sm text-muted-foreground">High-level roadmap for implementation</p>
                   </div>
                 </div>
               </div>
@@ -166,8 +166,8 @@ export function Data360Audit() {
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-medium">Implementation Plan</p>
-                    <p className="text-sm text-muted-foreground">Step-by-step execution strategy</p>
+                    <p className="font-medium">Possible roadmap</p>
+                    <p className="text-sm text-muted-foreground">Next steps?</p>
                   </div>
                 </div>
               </div>
