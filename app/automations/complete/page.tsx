@@ -1,49 +1,55 @@
-"use client"
+'use client';
 
-import { useEffect, useState } from "react"
-import { useSearchParams } from "next/navigation"
-import { supabase } from "@/lib/supabaseClient"
-import { Loader2, Download } from "lucide-react"
+import { Suspense } from 'react';
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { supabase } from "@/lib/supabaseClient";
+import { Loader2, Download } from "lucide-react";
 
-export default function AutomationCompletePage() {
-  const params = useSearchParams()
-  const workflowId = params.get("workflowId")
-  const [jsonUrl, setJsonUrl] = useState<string | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
+function AutomationCompleteContent() {
+  const params = useSearchParams();
+  const workflowId = params.get("workflowId");
+  const [jsonUrl, setJsonUrl] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function fetchJson() {
       if (!workflowId) {
-        setError("No workflow specified.")
-        setLoading(false)
-        return
+        setError("No workflow specified.");
+        setLoading(false);
+        return;
       }
+
       // In production, verify payment status with Mollie and only then allow download!
       // For demo, we fetch directly.
       const { data, error } = await supabase
         .from("workflows")
         .select("json, title")
         .eq("id", workflowId)
-        .single()
+        .single();
+
       if (error || !data) {
-        setError("Workflow not found or not available.")
-        setLoading(false)
-        return
+        setError("Workflow not found or not available.");
+        setLoading(false);
+        return;
       }
+
       // Create a blob and offer download
-      const blob = new Blob([JSON.stringify(data.json, null, 2)], { type: "application/json" })
-      const url = URL.createObjectURL(blob)
-      setJsonUrl(url)
-      setLoading(false)
+      const blob = new Blob([JSON.stringify(data.json, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      setJsonUrl(url);
+      setLoading(false);
     }
-    fetchJson()
+
+    fetchJson();
+
     // Cleanup blob URL
     return () => {
-      if (jsonUrl) URL.revokeObjectURL(jsonUrl)
-    }
+      if (jsonUrl) URL.revokeObjectURL(jsonUrl);
+    };
     // eslint-disable-next-line
-  }, [workflowId])
+  }, [workflowId]);
 
   return (
     <div className="container mx-auto px-4 py-24 sm:px-6 lg:px-8">
@@ -65,5 +71,18 @@ export default function AutomationCompletePage() {
         )}
       </div>
     </div>
-  )
+  );
+}
+
+export default function AutomationCompletePage() {
+  return (
+    <Suspense fallback={
+      <div className="container mx-auto px-4 py-24 text-center">
+        <Loader2 className="animate-spin h-8 w-8 text-primary mx-auto" />
+        <p className="mt-4">Loading...</p>
+      </div>
+    }>
+      <AutomationCompleteContent />
+    </Suspense>
+  );
 }
