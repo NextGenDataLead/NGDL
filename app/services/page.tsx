@@ -74,7 +74,7 @@ export default function ServicesPage() {
                           <TabsList className="grid w-full grid-cols-3">
                             <TabsTrigger value="starter">+12 Months</TabsTrigger>
                             <TabsTrigger value="professional">+6 Months</TabsTrigger>
-                            <TabsTrigger value="enterprise"><6 Months</TabsTrigger>
+                            <TabsTrigger value="enterprise">&lt;6 Months</TabsTrigger>
                           </TabsList>
                           <TabsContent value="starter" className="p-6">
                             <div className="text-center">

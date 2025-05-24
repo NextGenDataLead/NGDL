@@ -1,4 +1,4 @@
-import { Database, LineChart, Briefcase, Brain, Shield, Target, Users, GitBranch, BarChart2, Code, CheckCircle2, Network } from "lucide-react"
+import { Database, LineChart, Briefcase, Brain, Shield, Target, Users, GitBranch, BarChart2, Code, CheckCircle2, Network } from "lucide-react";
   
 export const services = [
   {
@@ -143,4 +143,4 @@ export const services = [
       enterprise: "100"
     }
   }
-]
+];
