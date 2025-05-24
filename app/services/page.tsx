@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { services } from "@/config/services"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { services } from "@/config/services";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function ServicesPage() {
   return (
